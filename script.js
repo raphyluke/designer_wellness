@@ -3,6 +3,14 @@ var carousel = document.getElementById("carousel");
 var screenwidth = window.innerWidth;
 var productShadow = document.getElementsByClassName("product-shadow");
 
+// if screen window sized is changed
+window.addEventListener("resize", () => {
+    screenwidth = window.innerWidth;
+    console.log("screenwidth changed to: " + screenwidth);
+    // refresh page
+    location.reload();
+});
+
 setInterval(() => {
     counter++;
     if (counter == 0) {
